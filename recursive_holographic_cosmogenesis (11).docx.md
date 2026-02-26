@@ -99,11 +99,25 @@ For astrophysical black holes, R(k) ≈ 1 near the core. The rate equation reduc
 
 ## **4.3 The Sub-Planckian Window**
 
-At nuclear scales (ρ\_nuc ≈ 2.3 × 10¹⁷ kg/m³), the naive ratio R ≈ 10⁻⁷⁶. Two effects could modify this.
+At nuclear scales (ρ\_nuc ≈ 6 × 10¹⁷ kg/m³), the naive ratio R \= ρ\_nuc/ρ\_P ≈ 10⁻⁷⁶. Three effects contribute to the effective ratio, which we now quantify.
 
-First, the Tolman relation[^24] establishes that locally measured energy density is frame-dependent: ρ\_local \= γ²ρ\_external. While gravitational time dilation at nuclear scales is negligible classically, the question of whether effective gravitational phenomena at the nuclear scale—suggested by holographic QCD models mapping confinement to an AdS horizon—could contribute to ρ\_local remains open. We note this connection without claiming it implies literal spacetime curvature: that would require a derivation from full quantum gravity that does not yet exist.
+**Ultrarelativistic constituent motion.** Constituent quarks inside a hadron are effectively ultrarelativistic. The up quark rest mass is \~2.2 MeV, yet each constituent carries \~300 MeV of energy inside the proton (938 MeV distributed among three valence quarks and a sea of gluons). The Lorentz factor for a typical constituent is γ ≈ E\_quark/m\_quark c² ≈ 100\. Approximately 98.5% of the proton’s mass is not rest mass but kinetic and gluon field energy—this energy genuinely gravitates and is already included in ρ\_nuc. The stress-energy tensor for relativistic matter gives T⁰⁰ \= γ²ρ\_rest, but since ρ\_nuc already accounts for the full energy content, the relativistic enhancement is already folded into the measured nuclear density. The relevant observation is that the interior of every proton is a furnace of ultrarelativistic energy density, with constituent proper time dilated by γ ≈ 100 relative to the lab frame: dτ\_quark \= dt\_lab/γ.
 
-Second, \~98% of hadronic mass is QCD binding energy that genuinely gravitates. At the hadronic scale this is negligible compared to the strong force, but in any theory where G runs, its significance changes with scale. We identify this as a parametric possibility: if G(k) runs sufficiently at nuclear scales, R(k) could be significantly closer to unity. Lattice quantum gravity calculations at hadronic scales can test this.
+**Holographic gravitational enhancement.** The Tolman relation[^24] establishes that locally measured temperature and energy density depend on gravitational potential: T\_local √(g₀₀) \= constant. In flat spacetime around a nucleus, g₀₀ ≈ 1 and the Tolman factor contributes nothing classically. However, in holographic QCD—where the confining QCD vacuum is modeled as a slice of anti-de Sitter space with an infrared wall—confined quarks live in an effective curved geometry. In this holographic dual description, g₀₀ is not unity. The quarks sit in an effective gravitational well in the holographic (radial AdS) direction, and the Tolman–Oppenheimer relation applies in that direction: ρ\_local(z) \= ρ\_boundary/√(g₀₀(z)), where z is the holographic coordinate. As g₀₀ → 0 near the IR wall (the confinement scale), the locally measured energy density in the holographic frame diverges. We do not claim this implies literal spacetime curvature at the nuclear scale—but we note that in any holographic description of confinement, the effective gravitational potential experienced by quarks is not negligible, and the Tolman enhancement in the holographic direction could be substantial.
+
+**Running G enhancement.** At nuclear scales, k ≈ 1/r\_p ≈ 1 GeV (where r\_p ≈ 0.87 fm is the proton charge radius). The running gravitational coupling at this scale is G(k\_nuc) \= G₀/(1 \+ ωG₀/r\_p²). If G runs significantly at hadronic scales—meaning the gravitational coupling is stronger at short distances—then ρ\_P(k) \= c⁵/(ħG²) decreases (because G increases), and R(k) grows from below.
+
+**Combined effective ratio.** The three effects combine into a single expression for the effective ratio at nuclear scales:
+
+          *R\_eff(k) \= \[ρ\_nuc / √(g₀₀(z))\] / \[ρ\_P(0) / (1 \+ ω G₀ k²)²\]*(3b)
+
+where ρ\_nuc ≈ 6 × 10¹⁷ kg/m³ already includes the ultrarelativistic constituent energy, 1/√(g₀₀(z)) is the holographic Tolman factor from the effective AdS geometry of confinement, and (1 \+ ωG₀k²)² is the running-G suppression of the Planck density threshold. The numerator is enhanced from above by two effects (ultrarelativistic energy already present in ρ\_nuc, plus holographic Tolman amplification); the denominator is suppressed from below by running G. The naive ratio of 10⁻⁷⁶ could be substantially modified.
+
+Of these three contributions, the first (γ² ≈ 10⁴) is already absorbed into ρ\_nuc and accounts for the difference between quark rest masses (\~10 MeV total) and the proton mass (938 MeV). It alone moves R from \~10⁻⁷⁶ to \~10⁻⁷⁶ (no change, since it’s already counted). The second (holographic Tolman) and third (running G) are genuinely unknown at nuclear scales and represent the open computational problem.
+
+**Temporal structure of the nuclear interior.** In the present framework, the rate field Γ(x) \= (1/t\_P)(ρ\_local/ρ\_P)^α is the local cosmogenesis rate—equivalently, the local clock rate. The ratio Γ\_quark/Γ\_lab \= (ρ\_local,quark/ρ\_local,lab)^α describes the temporal regime experienced by confined quarks relative to the laboratory. The special-relativistic time dilation (γ ≈ 100\) is the kinematic component; the holographic Tolman factor is the effective gravitational component. An observer in the lab is blind to the internal temporal structure of the proton—they see a stable particle. But the rate field inside the proton is orders of magnitude higher than the lab rate field. This is a specific instance of the general principle: locality blinds the observer to the internal temporal states of confined systems.
+
+**Computational target.** Equation 3b identifies R\_eff(k) as the specific quantity that can be computed from first principles. The holographic Tolman factor 1/√(g₀₀(z)) is calculable from any holographic QCD model (hard-wall, soft-wall, or Sakai–Sugimoto) by evaluating the metric at the confinement scale. The running-G factor (1 \+ ωG₀k²)² is calculable from asymptotic safety FRG equations at hadronic momentum scales. Neither calculation has been performed in this combined context. If R\_eff(k\_nuc) remains negligibly small, the sub-Planckian window closes and mirror formation is restricted to astrophysical black holes. If R\_eff(k\_nuc) approaches values significantly above the naive estimate, the rate field has non-trivial structure at nuclear scales with potentially observable consequences. Either outcome is informative. We flag this as a concrete computational program for the asymptotic safety and holographic QCD communities.
 
 # **5\. Frequency Shifts as Rate Field Signatures**
 
@@ -126,6 +140,20 @@ Cosmological redshift records Γ’s temporal evolution:
           *1 \+ z \= Γ(t\_emit) / Γ(t\_obs)*(5)
 
 The discovery of accelerating expansion[^28][^29] is reinterpreted: the rate field evolves as the interior geometry approaches its future mirror boundary, and the rational form of w(z) derived in Section 6 is the quantitative expression of this approach. The framework thus replaces two unexplained features of standard cosmology—the Big Bang initial singularity and the cosmological constant—with a single mechanism: gravitational compression producing daughter spacetimes through T-duality at the mirror boundary.
+
+## **5.3 Local Temporal Regimes: Kinematic, Gravitational, and Rate-Field**
+
+Three distinct notions of ‘local clock rate’ appear in this framework. Conflating them produces errors; separating them clarifies where standard physics ends and the framework’s interpretive content begins.
+
+**(A) Kinematic (SR) clock rate.** A constituent moving at Lorentz factor γ relative to the lab experiences proper time dτ \= dt/γ. This is frame-dependent and does not by itself create a gravitational potential. It changes the constituent’s clock rate relative to the lab, but it does not source spacetime curvature—that requires invariant stress-energy, not a choice of inertial frame. For quarks inside a proton (γ ≈ 100), the kinematic time dilation is real but entirely standard special relativity. Massless modes (gluons, photons) do not have proper time (dτ \= 0\) and serve only as relational clocks through their frequency.
+
+**(B) Gravitational (GR) clock rate.** The gravitational redshift f\_obs/f\_emit \= √(g\_tt(emit)/g\_tt(obs)) depends on the invariant metric and sources real, frame-independent time dilation. At nuclear scales in flat spacetime, g\_tt ≈ 1 and gravitational time dilation is negligible. However, in holographic QCD models, confined quarks live in an effective curved geometry where g\_tt is not unity (Section 4.3). Any gravitational contribution to the nuclear temporal regime must come from this effective metric, not from SR kinematics.
+
+**(C) Rate-field clock rate.** The rate field Γ(x) \= (1/t\_P)(ρ\_local/ρ\_P)^α defines a local cosmogenesis rate that we interpret as a local clock rate. The master frequency relation f\_obs/f\_emit \= Γ(x\_emit)/Γ(x\_obs) (Eq. 4\) is a restatement of GR redshift in terms of this rate field—it is an interpretive mapping, not new physics, unless and until Γ is shown to contain contributions beyond the standard metric. The new physical content would come from running G(k) modifying the effective ρ\_P (Section 4.1) or the holographic Tolman factor modifying the effective ρ\_local (Section 4.3). Without those contributions, the rate-field description is exactly equivalent to GR.
+
+**Double-counting warning.** The nuclear energy density ρ\_nuc ≈ 6 × 10¹⁷ kg/m³ already includes the full relativistic energy content (938 MeV per proton, of which 98.5% is kinetic and gluon field energy). Multiplying ρ\_nuc by γ² would be double-counting: the γ² enhancement is what makes the proton weigh 938 MeV instead of \~10 MeV. Any enhancement of R\_eff(k) (Eq. 3b) beyond the naive 10⁻⁷⁶ must come from the holographic Tolman factor 1/√(g₀₀(z)) or the running-G suppression of ρ\_P(k)—not from re-applying special-relativistic time dilation.
+
+This separation clarifies the framework’s claim: dense or confined systems have rich internal dynamics that are operationally inaccessible to external observers. The rate field Γ provides a bookkeeping device for ‘how fast the internal process is running’ relative to what an observer can couple to. The kinematic component (γ) is standard and already counted. The genuinely open question is whether confinement implies an observer-access restriction—mediated by the holographic metric—that functions as an effective gravitational redshift in the holographic direction. That question is answered by computing R\_eff(k) from Eq. 3b.
 
 # **6\. Prediction: Dark Energy Equation of State**
 
@@ -183,7 +211,7 @@ Quantitative comparison requires fixing Δρ/ρ₀ (one free parameter, since α
 
 **CMB Fractal Echoes.** If previous mirror transitions occurred (as in Penrose’s CCC[^31]), the recursive structure should imprint fractal self-similarity in the CMB at multiple angular scales.
 
-**Running G at Nuclear Scales.** The effective Planck density at hadronic scales is computable from asymptotic safety FRG equations. Lattice calculations can test whether G(k) modifies R(k) significantly.
+**Running G at Nuclear Scales.** The effective ratio R\_eff(k) (Eq. 3b) identifies a concrete computational target: the holographic Tolman factor from AdS/QCD models and the running gravitational coupling from asymptotic safety FRG equations, both evaluated at hadronic momentum scales (\~1 GeV). Neither calculation has been performed in this combined context. The result determines whether the sub-Planckian window is open or closed—and either outcome constrains the framework.
 
 ## **7.2 Relationship to Existing Frameworks**
 
@@ -210,6 +238,8 @@ We have developed recursive holographic cosmogenesis with five contributions: co
 **Running G:** G(k) \= G₀/(1 \+ ωG₀k²) (Eq. 2\)
 
 **Scale-dependent Planck density:** ρ\_P(k) \= ρ\_P(0)(1 \+ ωG₀k²)² (Eq. 3\)
+
+**Effective sub-Planckian ratio:** R\_eff(k) \= \[ρ\_nuc/√(g₀₀(z))\] / \[ρ\_P(0)/(1 \+ ωG₀k²)²\] (Eq. 3b)
 
 **Master frequency relation:** f\_obs/f\_emit \= Γ(x\_emit)/Γ(x\_obs) (Eq. 4\)
 
